@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# VS Code & IDEs
+.vscode/
+.idea/
+*.iml
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build & Packaging
+build/
+dist/
+*.egg-info/
+
+# Node (if any frontend assets)
+node_modules/
+
+# Django local files
+# (SQLite for local dev; adjust if you use another DB)
+db.sqlite3
+
+# Environment & local settings
+.env
+local_settings.py
