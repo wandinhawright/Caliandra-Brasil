@@ -342,6 +342,138 @@
         </div>
     </div>
 </section>
+
+
+<style>
+    /* Estilo da Seção de Produtos */
+    .products-title {
+        color: #7DA87B;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .product-card {
+        background-color: #C5E1A5; /* Verde claro dos cards */
+        border-radius: 15px;
+        border: none;
+        position: relative;
+        padding: 20px;
+        margin-top: 40px; /* Espaço para a foto subir */
+        transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Foto do produto saindo para fora do card */
+    .product-img-overlap {
+        width: 100px;
+        position: absolute;
+        top: -40px;
+        left: 20px;
+        filter: drop-shadow(0 10px 10px rgba(0,0,0,0.2));
+    }
+
+    .product-info-box {
+        margin-left: 100px; /* Abre espaço para a imagem à esquerda */
+    }
+
+    .product-name-badge {
+        background-color: #6a8166; /* Verde escuro do nome */
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .product-description {
+        font-size: 0.75rem;
+        color: #444;
+        line-height: 1.2;
+    }
+
+    .product-price {
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: #222;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .product-installments {
+        font-size: 0.7rem;
+        color: #555;
+    }
+
+    .btn-buy-now {
+        background-color: #b0cc8d;
+        color: #444;
+        border: none;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 5px 20px;
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+
+    .btn-buy-now:hover {
+        background-color: #a0bc7d;
+    }
+
+    /* Elementos decorativos (plantas nos cantos) */
+    .decor-plant {
+        position: absolute;
+        z-index: -1;
+        opacity: 0.8;
+    }
+</style>
+
+<section class="container my-5 position-relative">
+    <img src="{% static 'img/flor_vermelha.png' %}" class="decor-plant" style="top: -20px; left: -50px; width: 150px;">
+    <img src="{% static 'img/folhas_verdes.png' %}" class="decor-plant" style="top: -20px; right: -50px; width: 150px;">
+
+    <h2 class="products-title">Produtos em promoção!</h2>
+
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+            <div class="card product-card shadow-sm">
+                <img src="{% static 'img/frasco_produto.png' %}" class="product-img-overlap" alt="Produto">
+                
+                <div class="product-info-box">
+                    <div class="product-name-badge">Nome do Produto</div>
+                    <p class="product-description">
+                        Breve descrição aqui, lorem ipsum dolor amet. Lorem ipsum dolor sit amet ipsum.
+                    </p>
+                    <p class="product-price">R$ 120,00</p>
+                    <span class="product-installments">até 3x de R$ 40,00</span>
+                    <br>
+                    <button class="btn btn-buy-now">COMPRAR AGORA</button>
+                </div>
+            </div>
+        </div>
+        
+        {% for i in "12345" %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card product-card shadow-sm">
+                <img src="{% static 'img/frasco_produto.png' %}" class="product-img-overlap" alt="Produto">
+                <div class="product-info-box">
+                    <div class="product-name-badge">Nome do Produto</div>
+                    <p class="product-description">Breve descrição aqui, lorem ipsum dolor amet. Lorem ipsum dolor sit amet ipsum.</p>
+                    <p class="product-price">R$ 120,00</p>
+                    <span class="product-installments">até 3x de R$ 40,00</span>
+                    <br>
+                    <button class="btn btn-buy-now">COMPRAR AGORA</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
     </main>
 
     <footer class="text-white text-center py-4 mt-5"style="background-color: #B8D996;">
