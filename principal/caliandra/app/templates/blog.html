@@ -124,15 +124,19 @@
     <main>
         {% block content %}
         <style>
+            body {
+                background-color: #fff8f3;
+            }
+        </style>
+        <style>
     /* Seção Blog Minimalista */
     .blog-start-section {
-        background-color: #ffffff; /* Fundo branco puro */
         padding: 80px 0;
         border-bottom: 1px solid #f0f0f0;
     }
 
     .blog-title {
-        color: #7DA87B; /* Verde Caliandra */
+        color: #4a6132; /* Verde Caliandra */
         font-size: 5rem;
         font-weight: 700;
         margin-bottom: 25px;
@@ -155,7 +159,7 @@
     }
 </style>
 
-<section class="blog-start-section">
+<section class="blog-start-section"style="background: linear-gradient(to right, #cbe28b, #fff1b5, #fff8f3);">
     <div class="container text-center">
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -163,12 +167,112 @@
                 
                 <div class="blog-description">
                     <p>
-                        Energize naturally. 100% Pure Essential Oils designed to increase alertness and focus so you can take on the day.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                         Organizamos essa página apenas para você se informar melhor sobre o universo dos produtos naturais e as vantagens de aderir a esse estilo de vida mais saudável e sustentável. Aqui, você poderá saber mais sobre essa empresa, dicas e novidades que te ajudarão a entender por que escolher produtos naturais faz toda a diferença para o seu bem-estar e para o meio ambiente.
                     </p>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+<style>
+    /* Seção Quem Somos Minimalista */
+    .about-section {
+        padding: 40px 0;
+        position: relative;
+    }
+
+    /* Imagem da Logo com a mancha rosada */
+    .logo-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Mancha rosada artística atrás da logo */
+    .logo-container::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 110%;
+        height: 110%;
+        background: rgba(233, 186, 175, 0.4); 
+        filter: blur(25px);
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .about-logo {
+        position: relative;
+        z-index: 2;
+        max-width: 280px;
+        height: auto;
+    }
+
+    /* Título com efeito marca-texto verde */
+    .about-title {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #4a6132;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 25px;
+    }
+
+    .about-title span {
+        position: relative;
+        z-index: 2;
+    }
+
+    .about-title::after {
+        content: "";
+        position: absolute;
+        bottom: 8px;
+        left: 10%;
+        width: 80%;
+        height: 25px;
+        background-color: #DDE167; /* Verde oliva da Caliandra */
+        z-index: 1;
+        opacity: 0.8;
+    }
+
+    /* Estilo do Texto */
+    .about-text {
+        color: #666;
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 600px;
+    }
+</style>
+
+<section class="about-section">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                <div class="logo-container">
+                    <img src="{% static 'img/logo_caliandra_black.png' %}" class="about-logo" alt="Caliandra Logo">
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="ps-lg-4">
+                    <h2 class="about-title">
+                        <span>Quem Somos</span>
+                    </h2>
+                    
+                    <div class="about-text">
+                        <p>
+                           A Caliandra nasceu do desejo de aproximar amantes de produtos naturais e saudáveis para o corpo. Nosso propósito é simples e poderoso: organizar compras coletivas desses produtos, tornando-os mais acessíveis a todos.
+                        <p>Começamos organizando as compras coletivas por WhatsApp, onde permitimos que você pudesse adquirir seus produtos essenciais de forma rápida, fácil e organizada. Nossa rede de clientes foi crescendo e se fortalecendo, e por isso viemos a disponibilizar esse site para vocês, na intenção de otimizar ainda mais o seu tempo, com o catálogo completo dos produtos para você pedir a hora que quiser!
+                        <p>Sabemos que, muitas vezes, o acesso a esses produtos com qualidade e preços acessíveis podem ser um obstáculo no dia a dia. Por isso, criamos uma rede colaborativa onde cada cliente se torna parte de um movimento: quanto mais pessoas participam, melhores são as condições de acesso e custo.
+
+                        <p>A Caliandra é um espaço para quem deseja cuidar de si.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -181,7 +285,7 @@
         overflow: hidden;
         border: none;
         box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        background-color: #DDE167;
+        background-color: #dfe462;
     }
 
     /* Parte Superior: Imagem e Blur */
@@ -253,10 +357,12 @@
     }
 
     .post-excerpt {
-        color: #666;
+        color: #333;
         line-height: 1.6;
         max-width: 600px;
-        margin: 0 auto 30px auto;
+        margin: 0 auto 20px auto;
+        text-align: justify;
+        font-size: 1.2rem;
     }
 
     /* Botão Saiba Mais */
@@ -292,8 +398,17 @@
             <h2 class="post-title">Sobre as Compras Coletivas</h2>
             
             <p class="post-excerpt">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilis.
+                Você sabia que a Caliandra é, também, um grupo que promove compras coletivas de produtos naturais?⠀
+            </p>
+             <p class="post-excerpt">
+                Compra coletiva é quando juntamos um grande número de pessoas que tem interesse em determinado produto e negociamos diretamente com os fornecedores para comprar por valores mais baixos. Qualquer pessoa pode participar e as compras são abertas de tempos em tempos.⠀
+            </p>
+            <p class="post-excerpt">
+                Nossas compras coletivas ocorrem apenas em Brasília, mas a revenda é para o Brasil todo! ☀
+            </p>
+            <h2 class="post-title">Como funciona uma compra coletiva?</h2>
+            <p class="post-excerpt">
+                Após os clientes escolherem os produtos que desejam incluir na compra coletiva, levamos esses pedidos para os fornecedores, eles entregam os pedidos para nós, e depois distribuímos os produtos nos pontos de entrega combinados, visando facilitar seu acesso aos produtos naturais de qualidade!
             </p>
         </div>
     </div>
@@ -307,11 +422,19 @@
         </div>
 
         <div class="card-body-content">
-            <h2 class="post-title">Porque escolher produtos naturais?</h2>
+            <h2 class="post-title">Porque dar preferência para produtos naturais?</h2>
             
             <p class="post-excerpt">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilis.
+                Por não conterem substâncias sintéticas em suas composições, os produtos naturais promovem maior equilíbrio físico, mental e energético.
+            </p>
+            <p class="post-excerpt">
+                Outro bom motivo para aderir ao uso deles é o fato de que eles não poluem o meio ambiente, reduzindo nosso impacto negativo na qualidade da água e do solo.
+            </p>
+            <p class="post-excerpt">
+                Pense um pouco sobre quais são os produtos que você mais utiliza no dia-a-dia. Produtos de limpeza, de banho, de cuidados pessoais, etc. Quantos são produtos naturais e, portanto, melhor assimilados pelo seu organismo? Quais produtos industrializados da sua rotina poderiam ser substituídos por produtos naturais?
+            </p>
+            <p class="post-excerpt">
+                Ir gradualmente fazendo essas trocas é uma ótima forma de cuidar de nós mesmos, de quem amamos e do meio ambiente.
             </p>
         </div>
     </div>
@@ -325,11 +448,18 @@
         </div>
 
         <div class="card-body-content">
-            <h2 class="post-title">Como a Caliandra nasceu?</h2>
+            <h2 class="post-title">Aromaterapia...</h2>
+
             
             <p class="post-excerpt">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilis.
+                Sabia que existem, no mercado, diversos óleos essenciais adulterados? Infelizmente, com a crescente procura por essas substâncias preciosas, quantidade e preço muitas vezes passam à frente de qualidade. Então como podemos nos certificar da qualidade de um óleo essencial? 🧐⠀
+            <p class="post-excerpt">Em primeiro lugar, compre apenas de fornecedores que oferecem laudos técnicos (que descrevem as características físicas de cada óleo) e cromatografia (análise química da composição, feita em laboratório). Além disso, observe o OE adquirido: está em um recipiente adequado, de vidro e escuro, bem tampado? O rótulo apresenta as informações necessárias (nome popular, nome científico, origem, forma de extração, parte da planta de onde foi extraído, nome do responsável técnico e seu número de registro profissional, contato da empresa e, quando existente, geotipo e quimiotipo)? Por fim, quando se coloca uma gota dele na água, ele dissolve? Se sim, há algo errado, pois OEs não são hidrossolúveis.⠀<p/>
+            <p class="post-excerpt">Além disso, preciso te lembrar de alguns cuidados importantes ao começar sua prática:⠀<p/>
+            <p class="post-excerpt">Alguns óleos são dermoagressivos, ou seja, podem agredir sua pele se aplicados diretamente no corpo. O ideal é você usá-los diluídos em óleos carreadores ou pingando-os no seu difusor. Evite ao máximo ter contato direto com a pele. ⚡⠀<p/>
+            <p class="post-excerpt">Alguns óleos são fotossensíveis e podem manchar sua pele se houver uso seguido de exposição ao sol. Para evitar as manchas, não use esses óleos diretamente na pele e evite aplicá-los se for aproveitar a luz lá fora. ☀<p/>
+            <p class="post-excerpt">No geral, os óleos cítricos têm esse tipo de efeito, como Bergamota, Limão, Laranja, Grapefruit, entre outros. 🍊<p/>
+            <p class="post-excerpt">Procure sempre aprender sobre os óleos que te despertam interesse antes de usá-los para que tudo seja feito de forma segura.<p/>
+            <p class="post-excerpt">Fique atento aos produtos naturais que você utiliza. E pode ter a Caliandra como referência, pois trabalhamos apenas com produtos de qualidade! 🧡<p/>
             </p>
         </div>
     </div>

@@ -101,7 +101,7 @@
     <div class="offcanvas-body">
         <div class="text-center py-5">
             <p class="text-muted">Seu carrinho ainda está vazio.</p>
-            <a href="#" class="btn btn-outline-success" data-bs-dismiss="offcanvas">Continuar Comprando</a>
+            <a href="{% url 'compras' %}" class="btn btn-outline-success" data-bs-dismiss="offcanvas">Continuar Comprando</a>
         </div>
         
         </div>
@@ -122,9 +122,13 @@
 </nav>
 
     <main>
-        
+        <style>
+            body {
+                background-color: #fff8f3;
+            }
+        </style>
         {% block content %}
-        <section class="hero-section text-center">
+        <section class="hero-section text-center"style="background: linear-gradient(to right, #e7c1bb, #f2f3c2, #fff8f3);">
     <div class="container">
         <h1 class="display-4 fw-bold"style="color: #4a6132">Bem-vindo à Caliandra</h1>
         <p class="lead text-muted">Conheça nossos descontos exclusivos para quem quer cuidar da saúde!</p>
@@ -245,7 +249,7 @@
                 </h1>
                 
                 <p class="hero-sono-subtitle mb-5">
-                    Energize naturally. 100% Pure Essential Oils designed to increase alertness and focus so you can take on the day.
+                    Aproveite para fazer seu pedido antes que o tempo acabe! Aceitaremos pedidos até o dia dd/mm.
                 </p>
                 
                 <a href="{% url 'compras' %}" class="btn btn-caliandra">IR ÀS COMPRAS</a>
@@ -331,8 +335,8 @@
                     </h1>
                     
                     <div class="hero-subtitle mb-4">
-                        <p>Energize naturally. 100% Pure Essential Oils designed to increase alertness and focus so you can take on the day.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Você já se perguntou o que é uma compra coletiva?</p>
+                        <p>No nosso blog explicamos tudo para você, e muito mais. Acesse agora para descobrir mais sobre esse mundo incrível e natural, onde você descobre que consegue fazer muito pelo seu bem-estar e pelo meio ambiente.</p>
                     </div>
 
                     <a href="{% url 'blog' %}" class="btn btn-saiba-mais">SAIBA MAIS</a>
