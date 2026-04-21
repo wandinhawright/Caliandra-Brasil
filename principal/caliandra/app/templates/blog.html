@@ -14,31 +14,23 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #B8D996; height: 80px; position: relative;">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #B8D996; min-height: 80px;">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'inicio' %}" style="position: relative; z-index: 1050;">
+        <a class="navbar-brand" href="{% url 'inicio' %}" style="position: relative;">
             <img src="{% static 'img/Lgcaliandra.png' %}" 
                  alt="Caliandra Logo" 
-                 style="height: 140px; width: auto; position: absolute; top: -50px; left: 0;">
+                 style="height: 120px; width: auto; position: absolute; top: -45px; left: 0; z-index: 1051;">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link " style="color: black;" href="{% url 'inicio' %}">INÍCIO</a></li>
-                <li class="nav-item"><a class="nav-link " style="color: black;" href="{% url 'blog' %}">BLOG</a></li>
-                <li class="nav-item"><a class="nav-link " style="color: black;" href="{% url 'compras' %}">COMPRAS</a></li>
-                    </a>
-                </li>
-            </ul>
-        </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+                <li class="nav-item"><a class="nav-link" style="color: black;" href="{% url 'inicio' %}">INÍCIO</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: black;" href="{% url 'blog' %}">BLOG</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: black;" href="{% url 'compras' %}">COMPRAS</a></li>
             </ul>
         </div>
     </div>
@@ -415,13 +407,20 @@
             
             <p class="post-excerpt">
                 Sabia que existem, no mercado, diversos óleos essenciais adulterados? Infelizmente, com a crescente procura por essas substâncias preciosas, quantidade e preço muitas vezes passam à frente de qualidade. Então como podemos nos certificar da qualidade de um óleo essencial? 🧐⠀
-            <p class="post-excerpt">Em primeiro lugar, compre apenas de fornecedores que oferecem laudos técnicos (que descrevem as características físicas de cada óleo) e cromatografia (análise química da composição, feita em laboratório). Além disso, observe o OE adquirido: está em um recipiente adequado, de vidro e escuro, bem tampado? O rótulo apresenta as informações necessárias (nome popular, nome científico, origem, forma de extração, parte da planta de onde foi extraído, nome do responsável técnico e seu número de registro profissional, contato da empresa e, quando existente, geotipo e quimiotipo)? Por fim, quando se coloca uma gota dele na água, ele dissolve? Se sim, há algo errado, pois OEs não são hidrossolúveis.⠀<p/>
-            <p class="post-excerpt">Além disso, preciso te lembrar de alguns cuidados importantes ao começar sua prática:⠀<p/>
-            <p class="post-excerpt">Alguns óleos são dermoagressivos, ou seja, podem agredir sua pele se aplicados diretamente no corpo. O ideal é você usá-los diluídos em óleos carreadores ou pingando-os no seu difusor. Evite ao máximo ter contato direto com a pele. ⚡⠀<p/>
-            <p class="post-excerpt">Alguns óleos são fotossensíveis e podem manchar sua pele se houver uso seguido de exposição ao sol. Para evitar as manchas, não use esses óleos diretamente na pele e evite aplicá-los se for aproveitar a luz lá fora. ☀<p/>
-            <p class="post-excerpt">No geral, os óleos cítricos têm esse tipo de efeito, como Bergamota, Limão, Laranja, Grapefruit, entre outros. 🍊<p/>
-            <p class="post-excerpt">Procure sempre aprender sobre os óleos que te despertam interesse antes de usá-los para que tudo seja feito de forma segura.<p/>
-            <p class="post-excerpt">Fique atento aos produtos naturais que você utiliza. E pode ter a Caliandra como referência, pois trabalhamos apenas com produtos de qualidade! 🧡<p/>
+            </p>
+            <p class="post-excerpt">Em primeiro lugar, compre apenas de fornecedores que oferecem laudos técnicos (que descrevem as características físicas de cada óleo) e cromatografia (análise química da composição, feita em laboratório). Além disso, observe o OE adquirido: está em um recipiente adequado, de vidro e escuro, bem tampado? O rótulo apresenta as informações necessárias (nome popular, nome científico, origem, forma de extração, parte da planta de onde foi extraído, nome do responsável técnico e seu número de registro profissional, contato da empresa e, quando existente, geotipo e quimiotipo)? Por fim, quando se coloca uma gota dele na água, ele dissolve? Se sim, há algo errado, pois OEs não são hidrossolúveis.⠀
+            </p>
+            <p class="post-excerpt">Além disso, preciso te lembrar de alguns cuidados importantes ao começar sua prática:⠀
+            </p>
+            <p class="post-excerpt">Alguns óleos são dermoagressivos, ou seja, podem agredir sua pele se aplicados diretamente no corpo. O ideal é você usá-los diluídos em óleos carreadores ou pingando-os no seu difusor. Evite ao máximo ter contato direto com a pele. ⚡⠀
+            </p>
+            <p class="post-excerpt">Alguns óleos são fotossensíveis e podem manchar sua pele se houver uso seguido de exposição ao sol. Para evitar as manchas, não use esses óleos diretamente na pele e evite aplicá-los se for aproveitar a luz lá fora. ☀
+            </p>
+            <p class="post-excerpt">No geral, os óleos cítricos têm esse tipo de efeito, como Bergamota, Limão, Laranja, Grapefruit, entre outros. 🍊
+            </p>
+            <p class="post-excerpt">Procure sempre aprender sobre os óleos que te despertam interesse antes de usá-los para que tudo seja feito de forma segura.
+            </p>
+            <p class="post-excerpt">Fique atento aos produtos naturais que você utiliza. E pode ter a Caliandra como referência, pois trabalhamos apenas com produtos de qualidade! 🧡
             </p>
         </div>
     </div>

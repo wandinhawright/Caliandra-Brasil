@@ -14,31 +14,23 @@
 </head>
 <body>
 
-   <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #B8D996; height: 80px; position: relative;">
+   <nav class="navbar navbar-expand-lg navbar-light shadow-sm" style="background-color: #B8D996; min-height: 80px;">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'inicio' %}" style="position: relative; z-index: 1050;">
+        <a class="navbar-brand" href="{% url 'inicio' %}" style="position: relative;">
             <img src="{% static 'img/Lgcaliandra.png' %}" 
                  alt="Caliandra Logo" 
-                 style="height: 140px; width: auto; position: absolute; top: -50px; left: 0;">
+                 style="height: 120px; width: auto; position: absolute; top: -45px; left: 0; z-index: 1051;">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link " style="color: black;" href="{% url 'inicio' %}">INÍCIO</a></li>
-                <li class="nav-item"><a class="nav-link " style="color: black;" href="{% url 'blog' %}">BLOG</a></li>
-                <li class="nav-item"><a class="nav-link " style="color: black;" href="{% url 'compras' %}">COMPRAS</a></li>
-                    </a>
-                </li>
-            </ul>
-        </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+                <li class="nav-item"><a class="nav-link" style="color: black;" href="{% url 'inicio' %}">INÍCIO</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: black;" href="{% url 'blog' %}">BLOG</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: black;" href="{% url 'compras' %}">COMPRAS</a></li>
             </ul>
         </div>
     </div>
@@ -189,11 +181,11 @@
             
             <section class="cta-caliandra-section">
                 <div class="cta-card">
-                    <h2 class="cta-title">Compra Coletiva Livealoe Aberta!</h2>
+                    <h2 class="cta-title">Compra Coletiva da Terra Flor Aberta!</h2>
                     
                     <div class="cta-text">
                         <p>
-                            Separamos um PDF com todos os produtos em catálogo da <b>Livealoe</b>.
+                            Separamos um PDF com todos os produtos em catálogo da <b>Terra Flor</b>.
                         </p>
                         <p>
                             Após escolher seus produtos favoritos, clique no botão roxo para 
@@ -202,18 +194,30 @@
                     </div>
 
                     <div class="d-flex flex-column flex-md-row gap-4 justify-content-center align-items-center mt-5">
+<<<<<<< HEAD
                         <a href="{% static 'pdf/Livealoe-20.04.2026.pdf' %}" class="btn-caliandra btn-orange text-decoration-none shadow-sm">
                             <i class="fas fa-file-pdf me-2"></i> Abrir Catálogo PDF
                         </a>
                         
                         <a href="https://forms.gle/WiJbubAEsynhsd4u6" class="btn-caliandra btn-purple text-decoration-none shadow-sm">
+=======
+                        <a href="{% static 'pdf/Terraflor-05-03-2026.pdf' %}" class="btn-caliandra btn-orange text-decoration-none shadow-sm">
+                            <i class="fas fa-file-pdf me-2"></i> Abrir Catálogo PDF
+                        </a>
+                        
+                        <a href="https://forms.gle/2fNRjbiAFk2o5nRJ9 " class="btn-caliandra btn-purple text-decoration-none shadow-sm">
+>>>>>>> b9d1c8c939a891c764d8468cd44ce2766c621fce
                             <i class="fas fa-edit me-2"></i> Ir para Formulário
                         </a>
                     </div>
 
                     <div class="footer-alert">
                         <strong>Atenção:</strong> O formulário ficará disponível apenas de 
+<<<<<<< HEAD
                         <b>20/04 a 26/04!</b>
+=======
+                        <b>04/03 a 08/03!</b>
+>>>>>>> b9d1c8c939a891c764d8468cd44ce2766c621fce
                     </div>
                 </div>
             </section>
